@@ -13,9 +13,10 @@ Due by October 28th:
 
 Things to Do:
 
-- 1.) Setup a System where The User gets to choose which Algorithm they'd like to use.
-- 2.) Create the skeleton of those Algorithms
-- 3.) Be able to read from the file and put it into a 3D Matrix to compute.
+- 1.) Setup a System where The User gets to choose which Algorithm they'd like to use. 	(DONE)
+- 2.) Create the skeleton of those Algorithms						(DONE)
+- 3.) Be able to read from the file and put it into a 3D Matrix to compute.		(DONE)
+- 3.5) Create a Method to calculate Distance
 - 4.) Create the Methods,
     - a.) Uniform Cost 
     - b.) Uniform Cost without crossing Paths
