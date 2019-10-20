@@ -146,8 +146,7 @@ public class TravelingSalesmen {
 					
 					for(int j = 0; j < matrix.getSize(); j++)	{
 						
-						// Minus 1 because arrays start at 0
-						matrix.getGraph()[left - 1][right - 1] = 1;
+						matrix.getGraph()[left][right] = 1;
 					}
 				}
 				
