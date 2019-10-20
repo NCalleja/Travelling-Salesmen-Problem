@@ -9,7 +9,7 @@ Due by October 28th:
 
 - 1.) Uniform Cost
 - 2.) Uniform Cost except without crossing paths
-3.) Greedy Algorithm (Choosing the Shortest Paths)
+- 3.) Greedy Algorithm (Choosing the Shortest Paths)
 
 Things to Do:
 
