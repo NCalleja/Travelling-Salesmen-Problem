@@ -16,13 +16,14 @@ Things to Do:
 - 1.) Setup a System where The User gets to choose which Algorithm they'd like to use. 	(DONE)
 - 2.) Create the skeleton of those Algorithms						(DONE)
 - 3.) Be able to read from the file and put it into a 3D Matrix to compute.		(DONE)
-- 3.5) Create a Method to calculate Distance
-- 4.) Create the Methods,
+- 4.) Create a Method to calculate Distance						(DONE)
+- 5.) Setup the Tree Class
+- 6.) Create the Methods,
     - a.) Uniform Cost 
     - b.) Uniform Cost without crossing Paths
     - c.) Greedy Algorithm
-- 5.) Comense Testing (Start with smaller data for Uniform Cost 1 & 2)
-- 6.) Finish Class Assignment Handin:
+- 7.) Comense Testing (Start with smaller data for Uniform Cost 1 & 2)
+- 8.) Finish Class Assignment Handin:
     - a.) Explain what you learned.
     - b.) Include actual Graphs of the tours
     - c.) Include Tables where we compare the Algorithms

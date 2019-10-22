@@ -23,9 +23,7 @@ public class TravelingSalesmen {
 	public static void errorPrompt()	{
 		
 		System.out.println("Error: File Not Found");
-		System.out.println("Possible Fixies: ");
-		System.out.println("1.) Make sure your file is in the correct place");
-		System.out.println("2.) Make sure you typed the correct name of the file");
+		System.out.println("- Check if the File is in the correct folder");
 	}
 	
 	// Creating Empty Matrix
@@ -54,7 +52,7 @@ public class TravelingSalesmen {
 		}
 	}
 	
-	// Testing How Many Cities
+	// Testing How Many Cities and Their Coordinates
 	public static void howManyOnes(int[][] graph)	{
 		
 		int Ones = 0;
@@ -66,6 +64,8 @@ public class TravelingSalesmen {
 				if (graph[i][j] == 1)	{
 					
 					Ones++;
+					System.out.println("City: " + " (" + i + ", " + j + ")");
+					
 				}
 			}
 		}
@@ -75,6 +75,7 @@ public class TravelingSalesmen {
 		System.out.println();
 	}
 	
+	// Main Menu
 	public static void MainMenu(SolvingTSP graph)	{
 		
 		System.out.println("< Welcome to the Main Menu >");
@@ -153,8 +154,8 @@ public class TravelingSalesmen {
 				count++;
 			}
 			
-			// Prints Matrix to Console
-			// printMatrix(matrix.getGraph());
+			// Creating Tree with n amount of Nodes
+			treeNode tree = new treeNode(matrix.getGraph(), n);
 			
 			// Testing How Many Cities
 			howManyOnes(matrix.getGraph());

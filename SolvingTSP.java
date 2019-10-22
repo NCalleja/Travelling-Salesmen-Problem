@@ -1,4 +1,5 @@
 import java.util.*;
+import java.math.*;
 import java.lang.*;
 import java.io.*;
 
@@ -6,9 +7,7 @@ import java.io.*;
 public class SolvingTSP {
 	
 	private double distance;
-	private double[] arrayD;
 	private int[][] graph;
-	private boolean city;
 	
 	// Contructor for the TS Graph
 	public SolvingTSP() {
@@ -39,5 +38,21 @@ public class SolvingTSP {
 	
 	public void GreedyAlgo()	{
 		
+	}
+	
+	public double dist(int x1, int y1, int x2, int y2)	{
+		
+		int x = (x2 - x1);
+		int y = (y2 - y1);
+		
+		double d = Math.sqrt( (x*x) + (y*y) );
+		d = Math.abs(d);
+		
+		System.out.println("This is a test, the Distance is... " + d);
+		System.out.println();
+		
+		distance = d;
+		
+		return d;
 	}
 }
