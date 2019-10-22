@@ -27,7 +27,7 @@ public class TravelingSalesmen {
 	}
 	
 	// Creating Empty Matrix
-	public static void createEmpty(SolvingTSP matrix)	{
+	public static void createEmpty(CityGraph matrix)	{
 		
 		for(int i = 0; i < matrix.getSize(); i++)	{
 			
@@ -130,7 +130,7 @@ public class TravelingSalesmen {
 			inFile = new Scanner(f);
 			
 			// Creating New Matrix for TSP
-			SolvingTSP matrix = new SolvingTSP();
+			CityGraph matrix = new CityGraph();
 			
 			// Creates Empty Matrix
 			createEmpty(matrix);

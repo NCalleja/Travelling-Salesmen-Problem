@@ -8,7 +8,7 @@ public class treeNode {
 	PriorityQueue<treeNode> frontier = new PriorityQueue<treeNode>();
 	
 	treeNode[] visited;
-	treeNode source, state, parent;
+	treeNode source, parent;
 	
 	int numOfNodes;
 	int[][] data;
