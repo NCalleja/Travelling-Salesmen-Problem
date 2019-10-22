@@ -28,18 +28,6 @@ public class SolvingTSP {
 		return graph;
 	}
 	
-	public void UniformCost()	{
-		
-	}
-	
-	public void UniCostNoCross()	{
-		
-	}
-	
-	public void GreedyAlgo()	{
-		
-	}
-	
 	public double dist(int x1, int y1, int x2, int y2)	{
 		
 		int x = (x2 - x1);

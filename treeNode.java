@@ -5,8 +5,10 @@ import java.io.*;
 
 public class treeNode {
 	
+	PriorityQueue<treeNode> frontier = new PriorityQueue<treeNode>();
+	
 	treeNode[] visited;
-	treeNode source;
+	treeNode source, state, parent;
 	
 	int numOfNodes;
 	int[][] data;
@@ -15,6 +17,21 @@ public class treeNode {
 		
 		this.data = data;
 		this.numOfNodes = numOfNodes;
-		
 	}
+	
+	public treeNode UniformCost()	{
+		
+		return null;
+	}
+	
+	public treeNode UniCostNoCross()	{
+		
+		return null;
+	}
+	
+	public treeNode GreedyAlgo()	{
+		
+		return null;
+	}
+	
 }

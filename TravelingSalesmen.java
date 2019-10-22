@@ -76,7 +76,7 @@ public class TravelingSalesmen {
 	}
 	
 	// Main Menu
-	public static void MainMenu(SolvingTSP graph)	{
+	public static void MainMenu(treeNode tree)	{
 		
 		System.out.println("< Welcome to the Main Menu >");
 		System.out.println("-----------------------------------------------------------");
@@ -93,13 +93,13 @@ public class TravelingSalesmen {
 		switch (response)	{
 		
 		case 1:
-			graph.UniformCost();
+			tree.UniformCost();
 			break;
 		case 2:
-			graph.UniCostNoCross();
+			tree.UniCostNoCross();
 			break;
 		case 3:
-			graph.GreedyAlgo();
+			tree.GreedyAlgo();
 			break;
 		default:
 		}
@@ -161,7 +161,7 @@ public class TravelingSalesmen {
 			howManyOnes(matrix.getGraph());
 			
 			// Prompting Main Menu
-			MainMenu(matrix);
+			MainMenu(tree);
 		}
 		
 		catch(FileNotFoundException e)	{
