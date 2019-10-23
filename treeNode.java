@@ -8,12 +8,15 @@ public class treeNode<T> {
 	PriorityQueue<treeNode<T>> frontier = new PriorityQueue<treeNode<T>>();
 	
 	treeNode<T>[] visited;
-	treeNode<T> source, parent;
+	treeNode<T> source = null;
+	treeNode<T> parent = null;
+	
+	List<treeNode<T>> children = new ArrayList<>();
 	
 	int numOfNodes;
-	int[][] data;
+	T data;
 
-	public treeNode(int[][] data)	{
+	public treeNode(T data)	{
 		
 		this.data = data;
 	}
