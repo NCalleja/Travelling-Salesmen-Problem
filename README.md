@@ -13,11 +13,16 @@ Due by October 28th:
 
 Things to Do:
 
-- 1.) Setup a System where The User gets to choose which Algorithm they'd like to use. 	(DONE)
-- 2.) Create the skeleton of those Algorithms						(DONE)
-- 3.) Be able to read from the file and put it into a 3D Matrix to compute.		(DONE)
-- 4.) Create a Method to calculate Distance						(DONE)
-- 5.) Setup the Tree Class
+- 1.) Read from the File, store locations into an array inside of an array.
+    - int[][] locations
+    - The first [] stores the city, city 0, then the second [] stores the coordinates
+- 2.) Now, store all of the possible distances in an array inside of an array.
+    - int[][] distances
+    - The first [] stores the city, and the second [] represents the city that we're trying to reach
+    - [0] will store the distances from that city to every other city
+- 3.) Create the Path-Way class to represent a path to be taken, the Path-Way will be a node
+- 4.) Path Class will have the Queue that stores all of the paths
+- 5.) Start with Greedy Algo. to gain an understanding of how this should work
 - 6.) Create the Methods,
     - a.) Uniform Cost 
     - b.) Uniform Cost without crossing Paths
