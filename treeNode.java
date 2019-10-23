@@ -27,6 +27,11 @@ public class treeNode<T> {
 		this.numOfNodes = n;
 	}
 	
+	public void setSource(treeNode<T> source)	{
+		
+		this.source = source;
+	}
+	
 	public treeNode UniformCost()	{
 		
 		return null;
