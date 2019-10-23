@@ -155,7 +155,8 @@ public class TravelingSalesmen {
 			}
 			
 			// Creating Tree with n amount of Nodes
-			treeNode tree = new treeNode(matrix.getGraph(), n);
+			treeNode tree = new treeNode(matrix.getGraph());
+			tree.setNumOfNodes(n);
 			
 			// Testing How Many Cities
 			howManyOnes(matrix.getGraph());

@@ -3,20 +3,25 @@ import java.math.*;
 import java.lang.*;
 import java.io.*;
 
-public class treeNode {
+public class treeNode<T> {
 	
-	PriorityQueue<treeNode> frontier = new PriorityQueue<treeNode>();
+	PriorityQueue<treeNode<T>> frontier = new PriorityQueue<treeNode<T>>();
 	
-	treeNode[] visited;
-	treeNode source, parent;
+	treeNode<T>[] visited;
+	treeNode<T> source, parent;
 	
 	int numOfNodes;
 	int[][] data;
 
-	public treeNode(int[][] data, int numOfNodes)	{
+	public treeNode(int[][] data)	{
 		
 		this.data = data;
-		this.numOfNodes = numOfNodes;
+	}
+	
+	// Setting total number of Nodes
+	public void setNumOfNodes(int n)	{
+		
+		this.numOfNodes = n;
 	}
 	
 	public treeNode UniformCost()	{
