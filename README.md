@@ -18,7 +18,7 @@ Things to Do:
 - 3.) Create the Path-Way class to represent a path to be taken, the Path-Way will be a node
 - 4.) Path Class will have the Queue that stores all of the paths
 - 5.) Start with Greedy Algo. to gain an understanding of how this should work
-- 6.) Create the Methods,
+- 6.) Create the Classes,
     - a.) Uniform Cost 
     - b.) Uniform Cost without crossing Paths
     - c.) Greedy Algorithm

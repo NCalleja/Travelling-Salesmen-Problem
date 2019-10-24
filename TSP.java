@@ -20,7 +20,7 @@ public class TSP {
 	}
 
 	// Main Menu
-	public static void MainMenu(City cities)	{
+	public static void MainMenu(MapInfo map)	{
 		
 		System.out.println("< Welcome to the Main Menu >");
 		System.out.println("-----------------------------------------------------------");
@@ -34,6 +34,8 @@ public class TSP {
 		Scanner keyb = new Scanner(System.in);
 		int response = keyb.nextInt();
 		
+		Answer ans = null;
+		
 		switch (response)	{
 		
 		case 1:
@@ -43,9 +45,12 @@ public class TSP {
 			// cities.UniCostNoCross();
 			break;
 		case 3:
-			// cities.GreedyAlgo();
+			ans = new GreedyAlgo(map);
 			break;
 		default:
+			System.out.println("Error: Invalid Response");
+			System.out.println("Quitting...");
+			System.exit(0);
 		}
 	}
 	
@@ -58,7 +63,10 @@ public class TSP {
 	
 	// Prints City Coordinates
 	public static void printCityCoord(List<City> city, int n)	{
-			
+		
+		System.out.println();
+		System.out.println("Cities: Name & Location");
+		
 		for(int i = 0; i < n; i++)	{
 				
 			System.out.println("City: " + i + " " + city.get(i).cityCoord());
@@ -97,7 +105,9 @@ public class TSP {
 	}
 	
 	public static void main(String[] args) {
-				
+		
+		firstPrompt();
+		
 		// Getting the number of cities
 		System.out.println("How many Cities do you want to compute?");
 		Scanner keyb = new Scanner(System.in);
@@ -137,7 +147,11 @@ public class TSP {
 			}
 			
 			// Testing Distances
-			printDistances(distances);
+			// printDistances(distances);
+			
+			MapInfo map = new MapInfo(cities, distances, n);
+			
+			MainMenu(map);
 		}
 		
 		catch(FileNotFoundException e)	{
