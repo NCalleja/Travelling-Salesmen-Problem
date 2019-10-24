@@ -2,6 +2,7 @@ import java.util.*;
 import java.io.*;
 import java.lang.*;
 
+// The Greedy Algorithm
 public class GreedyAlgo implements Answer {
 	
 	private MapInfo map;
@@ -14,8 +15,6 @@ public class GreedyAlgo implements Answer {
 		path = new PathWay();
 	}
 	
-	
-	
 	@Override
 	public PathWay findPath() {
 		// TODO Auto-generated method stub
@@ -27,6 +26,4 @@ public class GreedyAlgo implements Answer {
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
-	
 }
