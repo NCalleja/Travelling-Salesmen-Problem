@@ -6,6 +6,4 @@ public class QueueNode implements Comparable<QueueNode> {
 		// TODO Auto-generated method stub
 		return 0;
 	}
-	
-	
 }

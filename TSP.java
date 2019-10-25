@@ -69,10 +69,14 @@ public class TSP {
 		// Case One: Uniform-Cost
 		case 1:
 			System.out.println("Not Done Yet");
+			algo = "Uniform Cost Search";
+			// ans = new UniformCost(map);
 			break;
 		// Case Two: Uniform-Cost without Crossing
 		case 2:
 			System.out.println("Not Done Yet");
+			algo = "Uniform Cost Search without Crossing Paths";
+			// ans = new UniformCostNoCross(map);
 			break;
 		// Case Three: Greedy Algorithm
 		case 3:
