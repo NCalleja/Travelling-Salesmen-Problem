@@ -1,9 +1,6 @@
 /* 	This is the City Class
 	It contains all the info for a city
 */
-import java.util.*;
-import java.lang.*;
-import java.io.*;
 
 public class City {
 
@@ -14,6 +11,12 @@ public class City {
 		this.x = x;
 		this.y = y;
 		this.cityName = cityName;
+	}
+	
+	// Prints the Cities Location
+	public void cityLocation()	{
+		
+		System.out.println("(" + x + ", " + y + ")");
 	}
 	
 	public int getX()	{
@@ -44,10 +47,5 @@ public class City {
 	public void setCityName(int cityName)	{
 		
 		this.cityName = cityName;
-	}
-	
-	public String cityCoord()	{
-		
-		return "(" + x + ", " + y + ")";
 	}
 }

@@ -1,6 +1,4 @@
 import java.util.*;
-import java.io.*;
-import java.lang.*;
 
 // This Class is the Path Way, helping create the tour
 // It maintains a list of Edges between Cities (which is what will be the main thing being compared)

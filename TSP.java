@@ -90,7 +90,8 @@ public class TSP {
 		
 		for(int i = 0; i < n; i++)	{
 				
-			System.out.println("City: " + i + " " + city.get(i).cityCoord());
+			System.out.print("City: " + i + " ");
+			city.get(i).cityLocation();
 		}
 		
 		System.out.println();

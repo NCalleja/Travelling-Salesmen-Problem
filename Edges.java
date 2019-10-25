@@ -1,5 +1,3 @@
-import java.math.*;
-
 // This class will be an Edge between two Cities
 public class Edges {
 	

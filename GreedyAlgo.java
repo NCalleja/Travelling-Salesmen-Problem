@@ -1,6 +1,4 @@
 import java.util.*;
-import java.io.*;
-import java.lang.*;
 
 // The Greedy Algorithm
 public class GreedyAlgo implements Answer {
@@ -35,6 +33,7 @@ public class GreedyAlgo implements Answer {
 			}
 		}
 		
+		// Retruning the Closest City to "city"
 		return closestCity;
 	}
 	
@@ -42,14 +41,32 @@ public class GreedyAlgo implements Answer {
 	@Override
 	public Tour ComputePath() {
 		
-		// Tour Starts at the First City
-		int StartingCity = 0;
-		int CurrentCity = StartingCity;
+		// Tour Starts at the First City "0"
+		int CurrentCity = 0;
 		
+		// Add the first city to visited
 		visited.add(CurrentCity);
 		
-		while (visited.size() < map.n)
+		// This loops through every City on the map until they all have been evaluated
+		while (visited.size() < map.n)	{
+			
+			// Get the closest city to the current city
+			int nextCity = closestCity(CurrentCity);
+			
+			// Adding a Edge to the Tour from current city to the closest city, and giving the distance
+			path.addEdgeToTour(new Edges(map.Cities.get(CurrentCity), map.Cities.get(nextCity), map.distances[CurrentCity][nextCity]));
+			
+			// Add that city to the visited array
+			visited.add(nextCity);
+			
+			// Start again from the next City
+			CurrentCity = nextCity;
+		}
 		
-		return null;
+		// Returning to the Starting City
+		path.addEdgeToTour(new Edges(map.Cities.get(CurrentCity), map.Cities.get(0), map.distances[CurrentCity][0]));
+		
+		// Return the entire Tour
+		return path;
 	}
 }
