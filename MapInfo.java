@@ -2,6 +2,7 @@ import java.util.*;
 import java.io.*;
 import java.lang.*;
 
+// This is the MapInfo Class which represents the entire map, and all the data on it.
 public class MapInfo {
 	
 	// These are Public because these are the most essential parts of the program

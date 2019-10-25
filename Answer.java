@@ -1,7 +1,13 @@
-// So I can get and return the answer using any Class
-// Greedy, Uniform, Uniform No Cross and so on
+/*
+ * The Answer Interface will allow the different methods of
+ * solving the Traveling Salesmen Problem to use and override 
+ * ComputePath() for their own way of solving the problem.
+ * This also allows the opproutunity to add more methods and 
+ * classes to solve the problem later, like simulated annealing
+ * and the genetic algorithm. 
+ */
 public interface Answer {
 	
-	public Tour findPath();
-	public Tour findPath(int x);
+	// The Answer is the Tour of which Algorithm you decide to use
+	public Tour ComputePath();
 }
