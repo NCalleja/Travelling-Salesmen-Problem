@@ -18,6 +18,15 @@ public class Tour implements Comparable<Tour> {
 		setTour(edges);
 	}
 	
+	// This prints the tour order (with weights) to the console
+	public void printTour()	{
+		
+		for(int i = 0; i < edges.size(); i++)	{
+			
+			edges.get(i).printCityToCity();
+		}
+	}
+	
 	// Setting Tour to start with a total distance of 0
 	public Tour()	{
 		

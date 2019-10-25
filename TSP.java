@@ -55,17 +55,21 @@ public class TSP {
 		Scanner keyb = new Scanner(System.in);
 		int response = keyb.nextInt();
 		
+		//The Interface allows it to be able to use any Case
 		Answer ans = null;
+		String algo = null;
 		
+		// Switch Case to give the user a choice to which algorithm they want to use
 		switch (response)	{
 		
 		case 1:
-			// cities.UniformCost();
+			System.out.println("Not Done Yet");
 			break;
 		case 2:
-			// cities.UniCostNoCross();
+			System.out.println("Not Done Yet");
 			break;
 		case 3:
+			algo = "Greedy Algorithm";
 			ans = new GreedyAlgo(map);
 			break;
 		default:
@@ -73,6 +77,23 @@ public class TSP {
 			System.out.println("Quitting...");
 			System.exit(0);
 		}
+		
+		// Beginning Timer
+		long timer = System.currentTimeMillis();
+		
+		// Creating Tour by Computing the Path
+		Tour mapTour = ans.ComputePath();
+		
+		// Presents Time and which algorithm you chose
+		System.out.println("Time: " + (System.currentTimeMillis() - timer));
+		System.out.println("Complete Tour Using " + algo + ": ");
+		
+		// Prints the tour
+		mapTour.printTour();
+		
+		// Shows total distance of the Tour, with retricting the answer to 2 decimals
+		System.out.println();
+		System.out.println("Distance of Tour: " + String.format("%.2f", mapTour.getDist()));
 	}
 	
 	// Error Prompt
