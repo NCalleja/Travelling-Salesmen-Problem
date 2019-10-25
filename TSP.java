@@ -5,6 +5,27 @@
  * 	The Traveling Salesmen Problem
  */ 
 
+/*	WARNING: There's a lot of comments here.
+ * 	These comments were meant to help me
+ *	as I went through this project. They
+ *	explain mostly all the reasoning behind 
+ *	the code. It's meant to help me keep
+ *	track of everything. This was the first
+ *	project that I've ever had of this scale.
+ *	I had to learn how to use other classes 
+ *	to my advantage, how to use a Interface,
+ *	and even how to do graphics. I've never 
+ *	made a GUI like this before, there's alot
+ *	of work that went into this. Even if 
+ *	it looks very sloppy and amatureish, 
+ *	just remember this was my first project
+ *	that has ever really made me push
+ *	myself to the limit, and required this
+ *	amount of work and thinking. This is
+ *	the most I've ever learned from any
+ *	programming project.
+ */
+
 import java.util.*;
 import java.lang.*;
 import java.io.*;

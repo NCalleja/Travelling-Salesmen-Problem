@@ -2,6 +2,6 @@
 // Greedy, Uniform, Uniform No Cross and so on
 public interface Answer {
 	
-	public PathWay findPath();
-	public PathWay findPath(int x);
+	public Tour findPath();
+	public Tour findPath(int x);
 }

@@ -10,6 +10,7 @@ public class MapInfo {
 	public final double[][] distances;
 	public final int n;
 	
+	// Constructor for Creating a Map that contains all the info needed
 	public MapInfo(List<City> Cities, double[][] distances, int n)	{
 		
 		this.n = n;

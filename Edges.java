@@ -1,3 +1,5 @@
+import java.math.*;
+
 // This class will be an Edge between two Cities
 public class Edges {
 	
@@ -11,6 +13,12 @@ public class Edges {
 		this.here = here;
 		this.there = there;
 		this.dist = dist;
+	}
+	
+	// Printing City -- # --> City to show the Edge
+	public void printCityToCity()	{
+		
+		System.out.println(here.getCityName() + " --- " + String.format("%.2f", dist) +" ---> " + there.getCityName());
 	}
 	
 	// Returns the Distance between two Cities
@@ -48,5 +56,4 @@ public class Edges {
 		
 		there = B;
 	}
-	
 }
