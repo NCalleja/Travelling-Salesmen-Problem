@@ -43,6 +43,7 @@ public class TSP {
 	// Main Menu
 	public static void MainMenu(MapInfo map)	{
 		
+		// Main Menu Prompt
 		System.out.println("< Welcome to the Main Menu >");
 		System.out.println("-----------------------------------------------------------");
 		System.out.println("How would you like to solve the Traveling Salesmen Problem?");
@@ -52,22 +53,28 @@ public class TSP {
 		System.out.println("2.) Uniform Cost without Crossing Paths");
 		System.out.println("3.) Greedy Algorithm");
 		
+		// Reading from User Input
 		Scanner keyb = new Scanner(System.in);
 		int response = keyb.nextInt();
 		
-		//The Interface allows it to be able to use any Case
+		// The Interface allows it to be able to use any Case
 		Answer ans = null;
+		
+		// Used to keep track of which case was choosen
 		String algo = null;
 		
 		// Switch Case to give the user a choice to which algorithm they want to use
 		switch (response)	{
 		
+		// Case One: Uniform-Cost
 		case 1:
 			System.out.println("Not Done Yet");
 			break;
+		// Case Two: Uniform-Cost without Crossing
 		case 2:
 			System.out.println("Not Done Yet");
 			break;
+		// Case Three: Greedy Algorithm
 		case 3:
 			algo = "Greedy Algorithm";
 			ans = new GreedyAlgo(map);
@@ -77,6 +84,8 @@ public class TSP {
 			System.out.println("Quitting...");
 			System.exit(0);
 		}
+		
+		System.out.println();
 		
 		// Beginning Timer
 		long timer = System.currentTimeMillis();
@@ -130,23 +139,6 @@ public class TSP {
 		return d;
 	}
 	
-	// Printing Matrix of Distances
-	public static void printDistances(double[][] dist)	{
-		
-		System.out.println("Distances of Cities: ");
-		System.out.println();
-		
-		for (int i = 0; i < dist.length; i++)	{
-			
-			for (int j = 0; j < dist.length; j++)	{
-				
-				System.out.print(dist[i][j] + " ");
-			}
-		
-			System.out.println();
-		}
-	}
-	
 	public static void main(String[] args) {
 		
 		firstPrompt();
@@ -188,9 +180,6 @@ public class TSP {
 					distances[i][j] = distance(cities.get(i), cities.get(j));
 				}
 			}
-			
-			// Testing Distances
-			// printDistances(distances);
 			
 			MapInfo map = new MapInfo(cities, distances, n);
 			

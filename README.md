@@ -16,8 +16,8 @@ Things to Do:
 - 1.) Read from the File, store locations into an array inside of an array. 					(DONE)
 - 2.) Now, store all of the possible distances in an array inside of an array. 					(DONE)
 - 3.) Create the Path-Way class to represent a path to be taken, the Path-Way will be a node	(DONE)
-- 4.) Create a Class to represent Edges
-- 5.) Start with Greedy Algo. to gain an understanding of how this should work
+- 4.) Create a Class to represent Edges															(DONE)
+- 5.) Start with Greedy Algo. to gain an understanding of how this should work					(DONE)
 - 6.) Create the Classes,
     - a.) Uniform Cost 
     - b.) Uniform Cost without crossing Paths
