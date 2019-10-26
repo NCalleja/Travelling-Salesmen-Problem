@@ -9,7 +9,7 @@ public class QueueNode implements Comparable<QueueNode> {
 	double weight;
 	
 	// Constructor for the first node without a parent
-	public QueueNode(byte current, byte depth, double weight)	{
+	public QueueNode(byte current)	{
 		
 		this.current = current;
 		this.depth = 0;
