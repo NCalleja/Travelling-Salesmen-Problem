@@ -10,8 +10,11 @@ public class UniformCost implements Answer {
 	// Vars: The Map, Starting City, and a List of Byte's to represent the Tour
 	public MapInfo map;
 	public int StartingCity = 0;
+
+	// Byte is essential to creating a program that will run fast and efficiently
+	// In class the professor expressed how important it was that we choose
+	// what kind of data we represent in the Queue.
 	public List<Byte> checkPath;
-	
 	public int farthest = 1;
 	public double overEstimate;
 	
@@ -35,8 +38,6 @@ public class UniformCost implements Answer {
 			
 			
 		}
-		
 		return null;
 	}
-
 }
