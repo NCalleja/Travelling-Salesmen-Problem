@@ -66,6 +66,8 @@ public class GreedyAlgo implements Answer {
 		// Returning to the Starting City
 		path.addEdgeToTour(new Edges(map.Cities.get(CurrentCity), map.Cities.get(0), map.distances[CurrentCity][0]));
 		
+		System.out.println(visited);
+		
 		// Return the entire Tour
 		return path;
 	}
