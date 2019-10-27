@@ -67,10 +67,9 @@ public class TSP {
 		switch (response)	{
 		
 		// Case One: Uniform-Cost
-		case 1:
-			System.out.println("Not Done Yet");
+		case 1:			
 			algo = "Uniform Cost Search";
-			// ans = new UniformCost(map);
+			ans = new UniformCost(map);
 			break;
 		// Case Two: Uniform-Cost without Crossing
 		case 2:
@@ -98,6 +97,7 @@ public class TSP {
 		Tour mapTour = ans.ComputePath();
 		
 		// Presents Time and which algorithm you chose
+		System.out.println();
 		System.out.println("Time: " + (System.currentTimeMillis() - timer));
 		System.out.println("Complete Tour Using " + algo + ": ");
 		
