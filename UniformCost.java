@@ -74,11 +74,6 @@ public class UniformCost implements Answer {
 		}
 	}
 	
-	public void printAfterTime()	{
-		
-		
-	}
-	
 	// Computing the Path
 	@Override
 	public Tour ComputePath() {

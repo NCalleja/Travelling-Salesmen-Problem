@@ -54,4 +54,33 @@ public class Edges {
 		
 		there = B;
 	}
+	
+	// These next methods are for Uniform Cost, without crossing paths
+	// Citing: geeksforgeeks.org/check-if-two-given-line-segments-intersect/
+	
+	// We have to find the orientation before we can find out if it intersects
+	// It's either clockwise (1), counterclockwise (-1), or it's co-linear (0)
+	public int orientation(City a, City b, City c)	{
+		
+		int n = (b.getY() - a.getY()) * (c.getX() - b.getX()) - (b.getX() - a.getX()) * (c.getY() - b.getY());
+		
+		if (n == 0)	{
+			
+			return 0;
+		}
+		
+		return n > 0 ? 1 : -1;
+	}
+	
+	
+	// This will check all the orientations and see if the path is crossing. 
+	public boolean isPathCrossing(Edges edge)	{
+		
+		int o1 = orientation(here, there, edge.here);
+		int o2 = orientation(here, there, edge.there);
+		int o3 = orientation(edge.here, edge.there, here);
+		int o4 = orientation(edge.here, edge.there, there);
+		
+		return (o1 != o2 && o3 != o4);
+	}
 }
