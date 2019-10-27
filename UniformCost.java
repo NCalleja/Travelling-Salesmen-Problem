@@ -68,6 +68,7 @@ public class UniformCost implements Answer {
 					
 					city.setParent(currentCity);
 					frontier.offer(city);
+					
 				}
 			}
 		}
