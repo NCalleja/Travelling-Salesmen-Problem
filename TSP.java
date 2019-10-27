@@ -28,7 +28,6 @@
  */
 
 import java.util.*;
-import java.lang.*;
 import java.io.*;
 
 public class TSP {
@@ -55,6 +54,7 @@ public class TSP {
 		System.out.println("3.) Greedy Algorithm");
 		
 		// Reading from User Input
+		@SuppressWarnings("resource")
 		Scanner keyb = new Scanner(System.in);
 		int response = keyb.nextInt();
 		
@@ -149,6 +149,7 @@ public class TSP {
 		
 		// Getting the number of cities
 		System.out.println("How many Cities do you want to compute?");
+		@SuppressWarnings("resource")
 		Scanner keyb = new Scanner(System.in);
 		int n = keyb.nextInt();
 		

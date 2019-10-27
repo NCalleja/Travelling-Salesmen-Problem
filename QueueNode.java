@@ -74,7 +74,7 @@ public class QueueNode implements Comparable<QueueNode> {
 		this.parent = parent;
 	}
 	
-	// Compares the weights of two nodes to help decide which one to use
+	// Auto Generated because of comparable
 	@Override
 	public int compareTo(QueueNode nodeCompare) {
 		

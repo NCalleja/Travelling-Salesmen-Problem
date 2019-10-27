@@ -7,9 +7,8 @@ public class UniformCost implements Answer {
 	// Using AI Book Section "3.4 Uniformed Search Strategies" page 84
 	public PriorityQueue<QueueNode> frontier = new PriorityQueue<QueueNode>();
 	
-	// Vars: The Map, Starting City, and a List of Byte's to represent the Tour
+	// Vars: The Map and a List of Byte's to represent the Tour
 	public MapInfo map;
-	public int StartingCity = 0;
 
 	// Byte is essential to creating a program that will run fast and efficiently
 	// In class the professor expressed how important it was that we choose

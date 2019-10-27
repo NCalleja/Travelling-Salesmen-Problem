@@ -18,7 +18,7 @@ Things to Do:
 - 3.) Create the Path-Way class to represent a path to be taken, the Path-Way will be a node	(DONE)
 - 4.) Create a Class to represent Edges															(DONE)
 - 5.) Start with Greedy Algo. to gain an understanding of how this should work					(DONE)
-- 6.) Create the Classes,
+- 6.) Create the Classes,																		(DONE)
     - a.) Uniform Cost 
     - b.) Uniform Cost without crossing Paths
     - c.) Greedy Algorithm

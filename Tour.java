@@ -10,7 +10,7 @@ public class Tour implements Comparable<Tour> {
 	List<Edges> edges = new ArrayList<Edges>();
 	
 	// Various var's being used for calculations
-	double max, min, totalDist;
+	double totalDist;
 	
 	// Constructor for the Tour, requires a list of edges to evaluate
 	public Tour(List<Edges> edges)	{
@@ -105,7 +105,7 @@ public class Tour implements Comparable<Tour> {
 		return (Integer) null;
 	}
 	
-	
+	// Auto Generated because of Comparable
 	@Override
 	public int compareTo(Tour path) {
 		
