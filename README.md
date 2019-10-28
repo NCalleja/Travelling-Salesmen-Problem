@@ -22,8 +22,8 @@ Things to Do:
     - a.) Uniform Cost 
     - b.) Uniform Cost without crossing Paths
     - c.) Greedy Algorithm
-- 7.) Comense Testing (Start with smaller data for Uniform Cost 1 & 2)
-- 8.) Finish Class Assignment Handin:
+- 7.) Comense Testing (Start with smaller data for Uniform Cost 1 & 2)                          (DONE)
+- 8.) Finish Class Assignment Handin:                                                           (DONE)
     - a.) Explain what you learned.
     - b.) Include actual Graphs of the tours
     - c.) Include Tables where we compare the Algorithms
