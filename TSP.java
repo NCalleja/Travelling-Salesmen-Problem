@@ -90,7 +90,7 @@ public class TSP {
 		// Case Four: Simulated Annealing
 		case 4:
 			algo = "Simulated Annealing";
-			// ans = new SimulatedAnnealing(map);
+			ans = new SimulatedAnnealing(map);
 			break;
 		// Case Five: Genetic Algorithm
 		case 5:

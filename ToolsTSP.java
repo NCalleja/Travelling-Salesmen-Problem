@@ -40,7 +40,7 @@ public abstract class ToolsTSP implements Answer {
 		}
 		
 		// Now creating edges from the random tour int array
-		for(int i = 0; i < mapTool.n; i++)	{
+		for(int i = 0; i < mapTool.n - 1; i++)	{
 			
 			City here = mapTool.Cities.get(tourRan[i]);
 			City there = mapTool.Cities.get(tourRan[i + 1]);
@@ -114,6 +114,7 @@ public abstract class ToolsTSP implements Answer {
 	 * The 2-Opt heuristic is a operation to delete two of the edges in the path,
 	 * and re-connect them in the remaining possible ways. If the modified path is an
 	 * improvement over the previouw one, it becomes the best solution, otherwise it is discarded
+	 * (I had to look up formulas on how to do this)
 	 */
 	public Tour twoOptPath(Tour path)	{
 		
