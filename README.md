@@ -1,7 +1,7 @@
-# Traveling-Salesmen-Problem
-This is my attempt to get the best estimate for "The Traveling Salesmen Problem"
+# Travelling-Salesmen-Problem
+This is my attempt to get the best estimate for "The Travelling Salesmen Problem"
 
-- We will be using multiple Algorithms to do the Traveling Salesmen Problem. 
+- We will be using multiple Algorithms to do the Travelling Salesmen Problem. 
 - For each Algorithm we'll keep track of the total amount of tours tested, as well as the runtime.
 - Report the Shortest tour and graph it. (For each Algorithm)
 

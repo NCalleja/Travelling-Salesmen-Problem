@@ -2,7 +2,7 @@
  *	10/20/19 - 12/07/19
  * 	COSC 461: Intro into Artificial Intellegence
  * 
- * 	The Traveling Salesmen Problem
+ * 	The Travelling Salesmen Problem
  */ 
 
 /*	
@@ -38,7 +38,7 @@ public class TSP {
 	// Introduction Prompt
 	public static void firstPrompt() {
 			
-		System.out.println("< Welcome to Nicholas Calleja's Traveling Salesmen Solutions >");
+		System.out.println("< Welcome to Nicholas Calleja's Travelling Salesmen Solutions >");
 		System.out.println("--------------------------------------------------------------");
 		System.out.println();
 	}
@@ -49,7 +49,7 @@ public class TSP {
 		// Main Menu Prompt
 		System.out.println("< Welcome to the Main Menu >");
 		System.out.println("-----------------------------------------------------------");
-		System.out.println("How would you like to solve the Traveling Salesmen Problem?");
+		System.out.println("How would you like to solve the Travelling Salesmen Problem?");
 		System.out.println("(type the number correlating with the options)");
 		System.out.println();
 		System.out.println("1.) Uniform Cost");
