@@ -29,7 +29,7 @@ public class SimulatedAnnealing extends ToolsTSP implements Answer {
 	}
 	
 	@Override
-	public Tour ComputePath() {
+	public Tour ComputePath()	{
 		
 		Tour currentPath = giveRandomTour();
 		Tour bestCurrentPath = currentPath;
@@ -55,10 +55,18 @@ public class SimulatedAnnealing extends ToolsTSP implements Answer {
 				bestCurrentPath = currentPath;
 			}
 			
+			currentPath = twoOptPath(bestCurrentPath);
 			
+			if(i % 100000 == 0)	{
+				
+				System.out.println(temp);
+			}
+			
+			temp -= .000001;
+			i++;
 		}
 		
-		return null;
+		return bestCurrentPath;
 	}
 	
 }
