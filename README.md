@@ -7,12 +7,6 @@ This is my attempt to get the best estimate for "The Traveling Salesmen Problem"
 
 Due by October 28th:
 
-- 1.) Uniform Cost
-- 2.) Uniform Cost except without crossing paths
-- 3.) Greedy Algorithm (Choosing the Shortest Paths)
-
-Things to Do:
-
 - 1.) Read from the File, store locations into an array inside of an array. 					(DONE)
 - 2.) Now, store all of the possible distances in an array inside of an array. 					(DONE)
 - 3.) Create the Path-Way class to represent a path to be taken, the Path-Way will be a node	(DONE)
@@ -28,7 +22,12 @@ Things to Do:
     - b.) Include actual Graphs of the tours
     - c.) Include Tables where we compare the Algorithms
 
-Due by December 2nd:
+Due by December 9th:
 
-- 4.) Genetic Algorithm
-- 5.) Simulated Annealing
+- 9.) Simulated Annealing																		(DONE)
+	- a.) Create a new Class for Method Tools to help
+- 10.) Genetic Algorithm
+- 11.) Finish Class Assignment Handin:
+	- a.) Update what you learned
+	- b.) Find a way to include a graph of the tours
+	- c.) Add Tables to compare the new Algorithms

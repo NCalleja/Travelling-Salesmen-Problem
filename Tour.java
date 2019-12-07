@@ -12,6 +12,9 @@ public class Tour implements Comparable<Tour> {
 	// Various var's being used for calculations
 	double totalDist;
 	
+	// Var's for Genetic Algo, fitness determines how "good" is the answer for what we're looking for
+	double fitness, min, max;
+	
 	// Constructor for the Tour, requires a list of edges to evaluate
 	public Tour(List<Edges> edges)	{
 		
@@ -138,6 +141,39 @@ public class Tour implements Comparable<Tour> {
 		
 		// Return the Given Path
 		return givenPath.toArray(new Integer[0]);
+	}
+	
+	// Get Fitness
+	public double getFit()	{
+		
+		// One divided by total Distance
+		fitness = 1 / totalDist;
+		
+		// Return the Fitness
+		return fitness;
+	}
+	
+	// Set a new Range for Fitness
+	public double setSelectRange(double totalPopFit, double oldMax)	{
+		
+		// New min and max
+		min = oldMax;
+		max = oldMax + (fitness / totalPopFit);
+		
+		// Return Max
+		return max;
+	}
+	
+	// Get the Probability
+	public double getProb()	{
+		
+		// Return Max - Min
+		return max - min;
+	}
+	
+	public boolean select(double prob)	{
+		
+		return min <= prob && max >= prob;
 	}
 	
 	// Auto Generated because of Comparable

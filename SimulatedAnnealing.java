@@ -3,14 +3,11 @@ public class SimulatedAnnealing extends ToolsTSP implements Answer {
 	
 	// Vars: The Optimal Path, The Map
 	private Tour optimalPath;
-	@SuppressWarnings("unused")
-	private MapInfo map;
 	
 	// Constructor for Simulated Annealing, takes in a Map to create a Tour
 	public SimulatedAnnealing(MapInfo map)	{
 		
 		super(map);
-		this.map = map;
 	}
 	
 	// isPathBad will decide if the Path is worth taking
