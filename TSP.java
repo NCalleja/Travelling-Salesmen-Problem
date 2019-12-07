@@ -1,12 +1,12 @@
 /*	Nicholas Calleja
- *	10/20/19
+ *	10/20/19 - 12/07/19
  * 	COSC 461: Intro into Artificial Intellegence
  * 
  * 	The Traveling Salesmen Problem
  */ 
 
 /*	
- * WARNING: There's a lot of comments here.
+ * WARNING: (10/20/19) There's a lot of comments here.
  * 	These comments were meant to help me
  *	as I went through this project. They
  *	explain mostly all the reasoning behind 
@@ -27,6 +27,9 @@
  *	programming project.
  */
 
+/*
+ * UPDATE: (12/07/19)
+ */
 import java.util.*;
 import java.io.*;
 
@@ -49,9 +52,11 @@ public class TSP {
 		System.out.println("How would you like to solve the Traveling Salesmen Problem?");
 		System.out.println("(type the number correlating with the options)");
 		System.out.println();
-		System.out.println("1.) Uniform Cost ");
+		System.out.println("1.) Uniform Cost");
 		System.out.println("2.) Uniform Cost without Crossing Paths");
 		System.out.println("3.) Greedy Algorithm");
+		System.out.println("4.) Simulated Annealing");
+		System.out.println("5.) Genetic Algorithm");
 		
 		// Reading from User Input
 		@SuppressWarnings("resource")
@@ -81,6 +86,16 @@ public class TSP {
 		case 3:
 			algo = "Greedy Algorithm";
 			ans = new GreedyAlgo(map);
+			break;
+		// Case Four: Simulated Annealing
+		case 4:
+			algo = "Simulated Annealing";
+			// ans = new SimulatedAnnealing(map);
+			break;
+		// Case Five: Genetic Algorithm
+		case 5:
+			algo = "Genetic Algorithm";
+			// ans = new GeneticAlgo(map);
 			break;
 		default:
 			System.out.println("Error: Invalid Response");
