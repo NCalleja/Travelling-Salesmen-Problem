@@ -62,6 +62,54 @@ public abstract class ToolsTSP implements Answer {
 		return new Tour(edges);
 	}
 	
+	// Creates Random Number Array
+	public int[] ranNums(int nums) {
+		
+		// Random int array
+		int[] ran = new int[nums];
+		
+		// Go through the Array
+		for(int i = 0; i < ran.length; i++)	{
+			
+			// Place Random Numbers
+			ran[i] = ranNum.nextInt(mapTool.n - 1) + 1;
+		}
+		
+		// Return the Random Number Array
+		return ran;
+	}
+	
+	// Checks to see if it's adjecent
+	public boolean isAdjacent(int[] num)	{
+		
+		for(int i = 0; i < num.length - 1; i++)	{
+			
+			for(int j = 0; j < num.length; j++)	{
+				
+				if((1 >= Math.abs(num[i] - num[j])) && (i != j))	{
+					
+					return true;
+				}
+			}
+		}
+		
+		return false;
+	}
+	
+	// Changing the Cities
+	public int[] changeCities(int numOfCities)	{
+		
+		int[] changePath = ranNums(numOfCities);
+		
+		while(isAdjacent(changePath))	{
+			
+			changePath = ranNums(numOfCities);
+		}
+		
+		Arrays.sort(changePath);
+		return changePath;
+	}
+	
 	/*
 	 * The 2-Opt heuristic is a operation to delete two of the edges in the path,
 	 * and re-connect them in the remaining possible ways. If the modified path is an
@@ -69,8 +117,42 @@ public abstract class ToolsTSP implements Answer {
 	 */
 	public Tour twoOptPath(Tour path)	{
 		
+		// Two Random Cities change
+		int[] changeCity = changeCities(2);
 		
+		// The Complete Given Path
+		Integer[] cityOrder = path.giveCompletePath();
 		
-		return null;
+		List<Integer> agitated = new ArrayList<Integer>();
+		
+		for(int i = 0; i < changeCity[0]; i++)	{
+			
+			agitated.add(cityOrder[i]);
+		}
+		
+		for(int i = changeCity[1]; i >= changeCity[0]; i--)	{
+			
+			agitated.add(cityOrder[i]);
+		}
+		
+		for(int i = changeCity[1] + 1; i < cityOrder.length; i++)	{
+			
+			agitated.add(cityOrder[i]);
+		}
+		
+		List<Edges> edges = new ArrayList<Edges>();
+		
+		for(int i = 0; i < agitated.size() - 1; i++)	{
+			
+			int start = agitated.get(i);
+			int end = agitated.get(i + 1);
+			
+			City here = mapTool.Cities.get(agitated.get(i));
+			City there = mapTool.Cities.get(agitated.get(i + 1));
+			
+			edges.add(new Edges(here, there, mapTool.distances[start][end]));
+		}
+		
+		return new Tour(edges);
 	}
 }

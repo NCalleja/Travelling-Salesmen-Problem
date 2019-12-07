@@ -105,6 +105,41 @@ public class Tour implements Comparable<Tour> {
 		return (Integer) null;
 	}
 	
+	// Gives you the Complete Path in a List of Integers
+	public Integer[] giveCompletePath()	{
+		
+		// The Given Path
+		List<Integer> givenPath = new ArrayList<Integer>();
+		
+		// Adding the Edges in order
+		for(Edges e : edges)	{
+			
+			givenPath.add(e.getStartingCity().getCityName());
+		}
+		
+		// Make it complete
+		givenPath.add(edges.get(0).getStartingCity().getCityName());
+		
+		// Return the Complete Given Path
+		return givenPath.toArray(new Integer[0]);
+	}
+	
+	// This will give you the Path but doesn't go back to the starting city
+	public Integer[] givePath()	{
+		
+		// The Given Path
+		List<Integer> givenPath = new ArrayList<Integer>();
+		
+		// Adding the Edges in order
+		for(Edges e : edges)	{
+			
+			givenPath.add(e.getStartingCity().getCityName());
+		}
+		
+		// Return the Given Path
+		return givenPath.toArray(new Integer[0]);
+	}
+	
 	// Auto Generated because of Comparable
 	@Override
 	public int compareTo(Tour path) {
