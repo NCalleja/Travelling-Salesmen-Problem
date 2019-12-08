@@ -171,7 +171,8 @@ public class Tour implements Comparable<Tour> {
 		return max - min;
 	}
 	
-	public boolean select(double prob)	{
+	// Is the Probabiltiy within the Range?
+	public boolean isInRange(double prob)	{
 		
 		return min <= prob && max >= prob;
 	}
