@@ -4,7 +4,7 @@ import java.util.*;
 // It maintains a list of Edges between Cities (which is what will be the main thing being compared)
 // Comparable (learned from COSC 311) should let us play with different types representing the path
 // Thus letting us to attempt increasing performence and saving space
-public class Tour implements Comparable<Tour>, GeneticTour {
+public class Tour implements Comparable<Tour> {
 	
 	// List of Edges to keep track of the Tour
 	List<Edges> edges = new ArrayList<Edges>();
@@ -132,14 +132,13 @@ public class Tour implements Comparable<Tour>, GeneticTour {
 		return givenPath.toArray(new Integer[0]);
 	}
 	
-	// This will give you the Path but doesn't go back to the starting city
+	// This will give you the Path 
 	public Integer[] giveCompletePath()	{
 		
 		return givePath(true);
 	}
 	
 	// Get Fitness
-	@Override
 	public double getFit()	{
 		
 		// One divided by total Distance
@@ -150,7 +149,6 @@ public class Tour implements Comparable<Tour>, GeneticTour {
 	}
 	
 	// Set a new Range for Fitness
-	@Override
 	public double setSelectRange(double totalPopFit, double oldMax)	{
 		
 		// New min and max
@@ -162,7 +160,6 @@ public class Tour implements Comparable<Tour>, GeneticTour {
 	}
 	
 	// Get the Probability
-	@Override
 	public double getProb()	{
 		
 		// Return Max - Min
@@ -170,7 +167,6 @@ public class Tour implements Comparable<Tour>, GeneticTour {
 	}
 	
 	// Is the Probabiltiy within the Range?
-	@Override
 	public boolean isInRange(double prob)	{
 		
 		return min <= prob && max >= prob;

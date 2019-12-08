@@ -247,20 +247,15 @@ public class GeneticAlgo extends ToolsTSP implements Answer {
 		return bestPath;
 	}
 	
-	public void createPop()	{
+	// Compute the Path
+	@Override
+	public Tour ComputePath() {
 		
 		for(int i = 0; i < pop.length; i++)	{
 			
 			// Add a Random Tour to the Population
 			pop[i] = giveRandomTour();
 		}
-	}
-	
-	// Compute the Path
-	@Override
-	public Tour ComputePath() {
-		
-		createPop();
 		
 		// Cyclying through the amount we'd like to create
 		for(int i = 0; i < 1000001; i++)	{
@@ -284,9 +279,7 @@ public class GeneticAlgo extends ToolsTSP implements Answer {
 			if(i % 100000 == 0)	{
 				
 				System.out.println("<----------------------------------------->");
-				System.out.println("Best Tour: ");
-				bestTour().printTour();
-				System.out.println("Best Tour Distance: " + bestTour().getDist());
+				System.out.println("                 THINKING                  ");
 				System.out.println("<----------------------------------------->");
 			}
 		}

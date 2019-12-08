@@ -29,6 +29,11 @@
 
 /*
  * UPDATE: (12/07/19)
+ * 	It has taken me a while but I've added 
+ * 	Simulated Annealing and the Genetic Algorithm.
+ * 	These we're by far the hardest of the five to
+ * 	implement. Besides our Checkers project, this
+ * 	is the most I've ever learned from a project.
  */
 import java.util.*;
 import java.io.*;
