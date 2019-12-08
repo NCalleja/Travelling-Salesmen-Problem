@@ -43,25 +43,23 @@ public class GeneticAlgo extends ToolsTSP implements Answer {
 	}
 	
 	// Choosing a Random Parent
-	public Tour randomParent()	{
+	private Tour randomParent()	{
 		
 		// Random Double
-		double random = Math.random();
+		double rand = Math.random();
 		
 		// Search the Population
 		for(int i = 0; i < pop.length; i++)	{
 			
 			// If it's within range of Random
-			if(pop[i].isInRange(random))	{
+			if(pop[i].isInRange(rand))	{
 				
 				// Return Parent Tour
 				return pop[i];
 			}
 		}
 		
-		// Wasn't able to select a Parent
-		System.out.println("Error: Could not Select a Parent");
-		return null;
+		throw new RuntimeException("Error: Unable to Select Parent");
 	}
 	
 	// Creates a Child Tour between a Dad and Mom
@@ -79,8 +77,8 @@ public class GeneticAlgo extends ToolsTSP implements Answer {
 		}
 		
 		// Both Parents Path
-		Integer[] dadPath = dad.givePath();
-		Integer[] momPath = mom.givePath();
+		Integer[] dadPath = dad.givePath(false);
+		Integer[] momPath = mom.givePath(false);
 		
 		if(ran.nextInt(2) == 0)	{
 			
@@ -220,22 +218,80 @@ public class GeneticAlgo extends ToolsTSP implements Answer {
 		return temp;
 	}
 	
-	// Compute the Path
-	@Override
-	public Tour ComputePath() {
+	// Gives the Average Tour
+	public double getAvgTour()	{
 		
-		// Go through the Population Array
+		double avg = 0;
+		
+		for(int i = 0; i < pop.length; i++)	{
+			
+			avg += pop[i].getDist();
+		}
+		
+		return avg / pop.length;
+	}
+	
+	// Gives the Best Tour
+	public Tour bestTour()	{
+		
+		Tour bestPath = pop[0];
+		
+		for(int i = 0; i < pop.length; i++)	{
+			
+			if(pop[i].getDist() < bestPath.getDist())	{
+				
+				bestPath = pop[i];
+			}
+		}
+		
+		return bestPath;
+	}
+	
+	public void createPop()	{
+		
 		for(int i = 0; i < pop.length; i++)	{
 			
 			// Add a Random Tour to the Population
 			pop[i] = giveRandomTour();
 		}
+	}
+	
+	// Compute the Path
+	@Override
+	public Tour ComputePath() {
 		
+		createPop();
+		
+		// Cyclying through the amount we'd like to create
 		for(int i = 0; i < 1000001; i++)	{
 			
+			// Evaluate and Reproduce
+			evaluate();
+			pop = reproduce();
 			
+			// Mutate the Population
+			for(int j = 0; j < pop.length; j++)	{
+				
+				pop[j] = mutate(pop[j]);
+			}
+			
+			if(i % 1000 == 0)	{
+				
+				System.out.println(i);
+				System.out.println(getAvgTour());
+			}
+			
+			if(i % 100000 == 0)	{
+				
+				System.out.println("<----------------------------------------->");
+				System.out.println("Best Tour: ");
+				bestTour().printTour();
+				System.out.println("Best Tour Distance: " + bestTour().getDist());
+				System.out.println("<----------------------------------------->");
+			}
 		}
 		
-		return null;
+		// Returning the Best Tour
+		return bestTour();
 	}
 }

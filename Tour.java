@@ -4,7 +4,7 @@ import java.util.*;
 // It maintains a list of Edges between Cities (which is what will be the main thing being compared)
 // Comparable (learned from COSC 311) should let us play with different types representing the path
 // Thus letting us to attempt increasing performence and saving space
-public class Tour implements Comparable<Tour> {
+public class Tour implements Comparable<Tour>, GeneticTour {
 	
 	// List of Edges to keep track of the Tour
 	List<Edges> edges = new ArrayList<Edges>();
@@ -13,7 +13,9 @@ public class Tour implements Comparable<Tour> {
 	double totalDist;
 	
 	// Var's for Genetic Algo, fitness determines how "good" is the answer for what we're looking for
-	double fitness, min, max;
+	double fitness;
+	double min; 
+	double max;
 	
 	// Constructor for the Tour, requires a list of edges to evaluate
 	public Tour(List<Edges> edges)	{
@@ -109,7 +111,7 @@ public class Tour implements Comparable<Tour> {
 	}
 	
 	// Gives you the Complete Path in a List of Integers
-	public Integer[] giveCompletePath()	{
+	public Integer[] givePath(boolean complete)	{
 		
 		// The Given Path
 		List<Integer> givenPath = new ArrayList<Integer>();
@@ -120,30 +122,24 @@ public class Tour implements Comparable<Tour> {
 			givenPath.add(e.getStartingCity().getCityName());
 		}
 		
-		// Make it complete
-		givenPath.add(edges.get(0).getStartingCity().getCityName());
+		if(complete)	{
+		
+			// Make it complete
+			givenPath.add(edges.get(0).getStartingCity().getCityName());
+		}
 		
 		// Return the Complete Given Path
 		return givenPath.toArray(new Integer[0]);
 	}
 	
 	// This will give you the Path but doesn't go back to the starting city
-	public Integer[] givePath()	{
+	public Integer[] giveCompletePath()	{
 		
-		// The Given Path
-		List<Integer> givenPath = new ArrayList<Integer>();
-		
-		// Adding the Edges in order
-		for(Edges e : edges)	{
-			
-			givenPath.add(e.getStartingCity().getCityName());
-		}
-		
-		// Return the Given Path
-		return givenPath.toArray(new Integer[0]);
+		return givePath(true);
 	}
 	
 	// Get Fitness
+	@Override
 	public double getFit()	{
 		
 		// One divided by total Distance
@@ -154,6 +150,7 @@ public class Tour implements Comparable<Tour> {
 	}
 	
 	// Set a new Range for Fitness
+	@Override
 	public double setSelectRange(double totalPopFit, double oldMax)	{
 		
 		// New min and max
@@ -165,6 +162,7 @@ public class Tour implements Comparable<Tour> {
 	}
 	
 	// Get the Probability
+	@Override
 	public double getProb()	{
 		
 		// Return Max - Min
@@ -172,6 +170,7 @@ public class Tour implements Comparable<Tour> {
 	}
 	
 	// Is the Probabiltiy within the Range?
+	@Override
 	public boolean isInRange(double prob)	{
 		
 		return min <= prob && max >= prob;

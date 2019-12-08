@@ -95,7 +95,7 @@ public class TSP {
 		// Case Five: Genetic Algorithm
 		case 5:
 			algo = "Genetic Algorithm";
-			// ans = new GeneticAlgo(map);
+			ans = new GeneticAlgo(map);
 			break;
 		default:
 			System.out.println("Error: Invalid Response");
