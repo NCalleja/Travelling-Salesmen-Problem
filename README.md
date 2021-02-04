@@ -27,7 +27,9 @@ Due by December 9th:
 - 9.) Simulated Annealing																		(DONE)
 	- a.) Create a new Class for Method Tools to help
 - 10.) Genetic Algorithm																		(DONE)
-- 11.) Finish Class Assignment Handin:
+- 11.) Finish Class Assignment Handin: (DONE)
 	- a.) Update what you learned
 	- b.) Find a way to include a graph of the tours
 	- c.) Add Tables to compare the new Algorithms
+
+GRADE RECIEVED: 100%!
